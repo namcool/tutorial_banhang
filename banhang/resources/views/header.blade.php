@@ -5,8 +5,8 @@
 			<div class="container">
 				<div class="pull-left auto-width-left">
 					<ul class="top-menu menu-beta l-inline">
-						<li><a href=""><i class="fa fa-home"></i> 90-92 Lê Thị Riêng, Bến Thành, Quận 1</a></li>
-						<li><a href=""><i class="fa fa-phone"></i> 0163 296 7751</a></li>
+						<li><a href=""><i class="fa fa-home"></i> 392/8/16 Cao Thắng p12 q10 TP.HCM</a></li>
+						<li><a href=""><i class="fa fa-phone"></i> 0168 223 0910</a></li>
 					</ul>
 				</div>
 				<div class="pull-right auto-width-right">
@@ -92,16 +92,16 @@
 				<div class="visible-xs clearfix"></div>
 				<nav class="main-menu">
 					<ul class="l-inline ov">
-						<li><a href="index.html">Trang chủ</a></li>
-						<li><a href="#">Sản phẩm</a>
+						<li><a href="{{route('trang-chu')}}">Trang chủ</a></li>
+						<li><a href="#">Loại sản phẩm</a>
 							<ul class="sub-menu">
-								<li><a href="product_type.html">Sản phẩm 1</a></li>
-								<li><a href="product_type.html">Sản phẩm 2</a></li>
-								<li><a href="product_type.html">Sản phẩm 4</a></li>
+								@foreach($loai_sp as $loai)
+								<li><a href="{{route('loaisanpham')}}">{{$loai->name}}</a></li>
+								@endforeach
 							</ul>
 						</li>
-						<li><a href="about.html">Giới thiệu</a></li>
-						<li><a href="contacts.html">Liên hệ</a></li>
+						<li><a href="{{route('thongtin')}}">Giới thiệu</a></li>
+						<li><a href="{{route('lienhe')}}">Liên hệ</a></li>
 					</ul>
 					<div class="clearfix"></div>
 				</nav>
